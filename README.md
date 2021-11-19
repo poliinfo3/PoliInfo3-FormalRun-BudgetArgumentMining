@@ -1,13 +1,8 @@
-# PoliInfo3-DryRun-BudgetArgumentMining
+# PoliInfo3-FormalRun-BudgetArgumentMining
 
 ## 更新情報
 
-- (2021/10/06) 評価スクリプト`poliinfo3_eval_bam.py`を公開
-  - 「配布ファイル」節以下に評価スクリプトの使い方を追記
-- (2021/08/18) `bam_random.py`を修正
-  - Windows で動作可能にしました（Windows Python 3.7 で確認）
-  - 出力をファイルに変更しました
-    - `-o`オプションで出力ファイル名を指定してください
+- (2021/11/19) リポジトリの公開
 
 ## 背景
 
