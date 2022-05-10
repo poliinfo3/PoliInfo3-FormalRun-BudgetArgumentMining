@@ -16,9 +16,6 @@
 Budget Argument Mining では、公開されている予算書類を対象として、会議録に含まれる議論と結びつけることを目的としています。
 具体的には、予算項目（金額、管轄省庁・部局名、説明）が与えられたときに、議会会議録に含まれる政治家の予算関連の発言（金額表現を含む発言）をみつけだし、以下の 7 つの議論ラベルを付与します．
 
-<!-- 具体的には、予算項目（金額、管轄省庁・部局名、説明）が与えられたときに、議会会議録に含まれる政治家の予算関連の発言（金額表現を含む発言）をみつけだし、３つの議論ラベル[ -->
-<!-- Claim（主張）」「Premise（根拠）」「その他」を付与します。 -->
-
 - Premise : 過去・決定事項,
 - Premise : 未来（現在以降）・見積
 - Premise : その他（例示・訂正事項など）
@@ -253,56 +250,3 @@ class MoneyExpression:
     argumentClass: Optional[str]
 ```
 
- <!-- - 対象コード：国会と自治体コード
-    - diet	国会 
-    - 012033	北海道	小樽市	ﾎｯｶｲﾄﾞｳ	ｵﾀﾙｼ 
-    - 080004	茨城県		ｲﾊﾞﾗｷｹﾝ	
-    - 401307	福岡県	福岡市	ﾌｸｵｶｹﾝ	ﾌｸｵｶｼ
-
- - ファイル名の付け方について
-   - [自治体コード]-[自治体名]-[minutes or budget]-[西暦年]-[識別番号]-[training, test or testGoldStandard].json
-   - ファイル名で、Dry Run と Formal Run の区別をしない
-   - training、test、testGoldStandard について  
-     - training[A-C] : 同じ年の定例会の3〜4日目以外（1〜2日目、5〜7日目）を訓練データとする。注釈者の違いをA〜Cで表す。
-     - test : 同じ年の定例会の3〜4日目を評価データとする。
-     - testGoldStandard[A-C] : 同じ年の定例会の3〜4日目を評価データとする。
-
-
- - 小樽市のファイル名
-    - 会議録
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-trainingA.json # 2019年 定例会第1回 注釈者Aが注釈付したデータ
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-trainingB.json 
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-trainingC.json 
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-test.json # 2019年 定例会第1回 ３〜４日のみのデータ 
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-testGoldStandardA.json # 注釈者Aが注釈付したGoldStandard 
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-testGoldStandardB.json
-      - PoliInfo3_BAM_012033-otaru-minutes-2019-01-testGoldStandardC.json
-    - 予算  
-      - PoliInfo3_BAM_012033-otaru-budget-2019-01.json  
-      - PoliInfo3_BAM_012033-otaru-budget-2020-01.json 
- - 福岡市のファイル名
-    - 会議録
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2019-01-trainingA.json 
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2019-01-test.json 
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2019-01-testGoldStandardA.json 
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2020-01-trainingA.json 
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2020-01-test.json
-      - PoliInfo3_BAM_401307-fukuoka-minutes-2020-01-testGoldStandardA.json
-    - 予算  
-      - PoliInfo3_BAM_401307-fukuoka-budget-2019-01.json  
-      - PoliInfo3_BAM_401307-fukuoka-budget-2020-01.json 
- - 茨城県のファイル名  
-    - 会議録  
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2019-01-trainingA.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2019-01-trainingB.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2019-01-test.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2019-01-testGoldStandardA.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2019-01-testGoldStandardB.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2020-01-trainingA.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2020-01-trainingB.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2020-01-test.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2020-01-testGoldStandardA.json
-      - PoliInfo3_BAM_080004-ibaraki-minutes-2020-01-testGoldStandardB.json
-    - 予算  
-      - PoliInfo3_BAM_080004-ibaraki-budget-2019-01.json
-      - PoliInfo3_BAM_080004-ibaraki-budget-2020-01.json -->
